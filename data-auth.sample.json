@@ -1,0 +1,40 @@
+{
+  "menu": [
+    {
+      "url": "",
+      "icon": "desktop_mac",
+      "color": "primary",
+      "label": "Escritorio"
+    },
+    {
+      "url": "configuracion",
+      "icon": "settings",
+      "color": "success",
+      "label": "Configuración",
+      "submenu": [
+        {
+          "url": "usuarios",
+          "label": "Usuarios"
+        },
+        {
+          "url": "entidades",
+          "label": "Entidades"
+        }
+      ]
+    }
+  ],
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBhZ2V0aWMuZ29iLmJvIiwiZXhwIjoxNDczODQ2MzQyfQ.sLZ736srh8M3T_qN5xz_01CeBQO64cRw611_88vs4ms",
+  "usuario": {
+    "id": 1,
+    "usuario": "admin",
+    "nombres": "Administrador",
+    "primer_apellido": "Sistema",
+    "segundo_apellido": "Sistema",
+    "email": "admin@agetic.gob.bo",
+    "id_entidad": 1,
+    "entidad": "Agencia de Gobierno electrónico y Tecnologías de la comunicación",
+    "id_rol": "1",
+    "rol": "admin",
+    "lang": "es"
+  }
+}

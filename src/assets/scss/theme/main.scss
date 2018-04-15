@@ -1,0 +1,169 @@
+// GENERAL
+$color: #99abb4;
+
+html, body {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: #99abb4;
+}
+
+main.content {
+  padding-top: 64px !important;
+  padding-bottom: 30px !important;
+
+  .container > .layout > section {
+    width: 100%;
+  }
+}
+
+.application > main > .container {
+  min-height: calc(100vh - 134px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: darken($color, 20%);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 12px; }
+
+hr {
+  border: none;
+  border-top: 1px solid $color;
+  margin: 15px 0;
+}
+
+.icon-small {
+  font-size: 1.1rem;
+}
+
+// LIST
+.list__tile {
+  font-size: 14px;
+}
+
+// MODAL - DIALOG
+.headline {
+  font-size: 20px !important;
+}
+
+.breadcrumbs + .container {
+  padding-top: 0;
+}
+
+.dialog {
+  min-width: 360px;
+
+  .card__title {
+    padding-bottom: 5px;
+  }
+
+  .headline {
+    position: relative;
+
+    & > .icon {
+      margin-right: 5px;
+    }
+
+    .btn {
+      position: absolute;
+      top: 8px;
+      right: 0;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.dialog-md {
+  .dialog {
+    min-width: 600px;
+  }
+}
+
+.dialog-lg {
+  .dialog {
+    min-width: 800px;
+  }
+}
+
+// BUTTONS
+.btn-container {
+  margin-bottom: 10px;
+
+  .btn {
+    margin-left: 0;
+  }
+}
+.btn {
+  outline: 0;
+  &:active, &:focus, &:hover {
+    outline: 0;
+  }
+}
+
+// FORM
+.input-group {
+  padding: 18px 0 10px 0;
+
+  label, input, .input-group__selections__comma {
+    font-size: 1rem;
+  }
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-error {
+  color: $error;
+  font-size: .8rem;
+  line-height: .9rem;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  display: none;
+}
+
+.input-group--error + .form-error {
+  display: block;
+}
+
+// ALERT
+.alert {
+  padding: 12px 15px;
+}
+.alert__icon.icon, .alert__dismissible .icon {
+  color: white;
+}
+
+// UTIL
+.no-wrap {
+  white-space: nowrap;
+  p {
+    line-height: 1rem;
+    &:last-child {
+      margin: 0;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.hide {
+  display: none !important;
+}
