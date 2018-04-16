@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend creado para la gestion de mensajeria twitter",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "keywords": [
+    "Redis",
+    "Express",
+    "Node",
+    "Vue",
+    "etc"
+  ],
+  "author": "adry.dabp@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "nodemon": "^1.17.3",
+    "redis": "^2.8.0"
+  }
+}

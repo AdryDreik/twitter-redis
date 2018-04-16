@@ -50,7 +50,7 @@ export default {
       this.$storage.remove('sidenav');
 
       store.commit('setDefault');
-      router.push('login');
+      router.push('login-twitter');
     },
 
     timerSession () {

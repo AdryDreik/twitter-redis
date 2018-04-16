@@ -10,7 +10,7 @@
             required
           ></v-text-field>
           <v-btn
-            @click.prevent="enviar"
+            @click.prevent="ingresar"
             color="primary"
           >
           INGRESAR  
@@ -24,11 +24,13 @@ export default {
   methods: {
     ingresar () {
       if (this.$refs.form.validate()) {
-        this.$service.post('/api/submit', {
-          name: this.name
-        })
+        this.$service.post('user', { user: this.name })
           .then((res) => {
-          });
+            console.log('------------------------------------');
+            console.log(res);
+            console.log('------------------------------------');
+          })
+          .catch(err => this.$message.error(err));
       }
     }
   },
