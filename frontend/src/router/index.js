@@ -9,6 +9,7 @@ import Usuario from '@/components/admin/usuario/Usuario';
 import Account from '@/components/admin/account/Account';
 
 import Entidad from '@/components/admin/entidad/Entidad';
+import LoginRedis from '@/components/redis/login';
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,11 @@ export default new VueRouter({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/login-twitter',
+      name: 'Login-twitter',
+      component: LoginRedis
     },
     {
       path: '/usuarios',

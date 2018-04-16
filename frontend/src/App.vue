@@ -12,7 +12,7 @@
         </v-layout>
       </v-container>
     </v-content>
-    <app-footer></app-footer>
+    <app-footer v-if="auth"></app-footer>
     <app-messages></app-messages>
     <app-alert></app-alert>
     <app-confirm></app-confirm>
@@ -34,6 +34,9 @@
 
   import { mapState } from 'vuex';
 
+  // Páginas que no necesitan autenticación/token/sesión
+  const PageNoLogin = ['login-twitter', 'otro'];
+
   export default {
     name: 'app',
     mixins: [ Auth ],
@@ -52,7 +55,9 @@
 
         this.$router.push('/');
       } else {
-        this.logout();
+        if (PageNoLogin.indexOf(this.$route.path.substring(1)) === -1) {
+          this.logout();
+        }
       }
 
       // Fullscreen event and hack mozilla
@@ -102,7 +107,7 @@
     },
     watch: {
       '$route' (to, from) {
-        if (!this.$storage.existUser()) {
+        if (!this.$storage.existUser() && PageNoLogin.indexOf(to.path.substring(1)) === -1) {
           this.logout();
         }
         if (to.path !== '/login' && from.path !== '/login') {
