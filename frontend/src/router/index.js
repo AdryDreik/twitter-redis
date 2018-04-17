@@ -10,6 +10,7 @@ import Account from '@/components/admin/account/Account';
 
 import Entidad from '@/components/admin/entidad/Entidad';
 import LoginRedis from '@/components/redis/login';
+import Comments from '@/components/redis/comments';
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,11 @@ export default new VueRouter({
       path: '/login-twitter',
       name: 'Login-twitter',
       component: LoginRedis
+    },
+    {
+      path: '/comments',
+      name: 'Comments',
+      component: Comments
     },
     {
       path: '/usuarios',

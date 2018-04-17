@@ -35,7 +35,7 @@
   import { mapState } from 'vuex';
 
   // Páginas que no necesitan autenticación/token/sesión
-  const PageNoLogin = ['login-twitter', 'otro'];
+  const PageNoLogin = ['login-twitter', 'comments'];
 
   export default {
     name: 'app',

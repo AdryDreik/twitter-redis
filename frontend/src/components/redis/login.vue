@@ -26,9 +26,11 @@ export default {
       if (this.$refs.form.validate()) {
         this.$service.post('user', { user: this.name })
           .then((res) => {
-            console.log('------------------------------------');
-            console.log(res);
-            console.log('------------------------------------');
+            if (res) {
+              this.$router.push('comments');
+              this.$message.success(res.message);
+              this.$storage.set('usuario', this.name);
+            }
           })
           .catch(err => this.$message.error(err));
       }
