@@ -30,7 +30,7 @@
             </div>
           </v-card-title>
           <v-card-actions>
-            <v-btn color="primary">Responder comentario</v-btn>
+            <v-btn color="primary" @click="dialog=true">Responder comentario</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -44,17 +44,30 @@
                 <div>
                   <h3 class="headline mb-0"><strong>{{(user && user.username) ? user.username.toUpperCase() : ''}}</strong></h3>
                   <div>{{(comments[0]) ? comments[0].comments : ''}}</div>
-                  <small><i><strong>Publicado en </strong>{{user.createAt}}</i></small>
                 </div>
               </v-card-title>
               <v-card-actions>
-                <v-btn color="primary">Responder comentario</v-btn>
+                <v-btn color="primary" @click="dialog=true">Responder comentario</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
         </v-layout>
       </v-flex>
     </v-layout>
+     <v-dialog v-model="dialog" max-width="500px">
+        <v-card>
+          <v-card-title>
+            Responder comentario
+          </v-card-title>
+          <v-card-text>
+            Comentario en desarrollo ...
+          </v-card-text>
+          <v-card-actions>
+            <v-btn color="primary" @click.stop="dialog=false">Enviar</v-btn>
+            <v-btn flat @click.stop="dialog=false">Cancelar</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
   </section>
 </template>
 <script>
@@ -78,6 +91,7 @@ export default {
   },
   data () {
     return {
+      dialog: null,
       user: null,
       comments: [],
       comment: null,
